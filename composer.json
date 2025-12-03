@@ -1,0 +1,33 @@
+{
+    "name": "versatecnologia/document-hub",
+    "description": "Cliente SDK para integração com API Gateway de impressão de documentos",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Fernando Maia",
+            "email": "fernando.maia@versatecnologia.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Versatecnologia\\DocumentHub\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^9|^10|^11",
+        "illuminate/http": "^9|^10|^11"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Versatecnologia\\DocumentHub\\DocumentHubServiceProvider"
+            ],
+            "aliases": {
+                "DocumentHub": "Versatecnologia\\DocumentHub\\Facades\\DocumentHub"
+            }
+        }
+    },
+    "minimum-stability": "dev"    
+}
