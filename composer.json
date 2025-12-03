@@ -1,6 +1,12 @@
 {
     "name": "fermaiasoares/document-hub",
-    "description": "Cliente SDK para integração com API Gateway de impressão de documentos",
+    "description": "Cliente SDK para integração com API Gateway de impressão de documentos Versatecnologia Document Hub",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/fermaiasoares/document-hub-php.git"
+        }
+    ],
     "type": "library",
     "license": "proprietary",
     "authors": [
