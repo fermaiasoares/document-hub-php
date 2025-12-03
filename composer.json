@@ -6,7 +6,8 @@
     "authors": [
         {
             "name": "Fernando Maia",
-            "email": "fernando.maia@versatecnologia.com.br"
+            "email": "fernando.maia@versatecnologia.com.br",
+            "homepage": "https://github.com/fermaiasoares"
         }
     ],
     "autoload": {
