@@ -19,6 +19,7 @@ class DocumentHub implements DocumentHubContract
         $baseUrl = self::baseUrl();
 
         $response = Http::withToken(self::apiToken())
+            ->timeout(self::timeoutHub())
             ->accept('*/*')
             ->get("$baseUrl/api/report-params", ['reportName' => $reportName]);
 
@@ -46,6 +47,7 @@ class DocumentHub implements DocumentHubContract
         }
 
         $response = Http::withToken(self::apiToken())
+            ->timeout(self::timeoutHub())
             ->accept('*/*')
             ->post("$baseUrl/api/generate-report?reportName=$reportName&format=$format", $data);
 
@@ -114,5 +116,10 @@ class DocumentHub implements DocumentHubContract
     protected static function apiToken(): string
     {
         return config('document-hub.api-token');
+    }
+
+    protected static function timeoutHub(): string
+    {
+        return config('document-hub.timeout');
     }
 }
